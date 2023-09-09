@@ -1,4 +1,188 @@
-h1,
-p {
-  font-family: Lato;
+/* App.scss */
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+/* Header Styles */
+.header {
+  background-color: #0074e4;
+  color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header .logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+.header .logo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.header .nav-links li {
+  margin-right: 1rem;
+}
+
+.header .nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.header .nav-links a:hover {
+  color: #fff;
+}
+
+/* Hero Section Styles */
+.hero {
+  /* background-image: url('hero-background.jpg'); */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 8rem 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #0074e4;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0050a2;
+}
+
+/* Features Section Styles */
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.feature {
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 300px;
+}
+
+.feature img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.feature h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Call to Action Styles */
+.cta {
+  text-align: center;
+  background-color: #fff;
+  padding: 4rem 0;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* Footer Styles */
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #333;
+  color: #fff;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .header .nav-links {
+    display: none;
+  }
+
+  .header .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .header .logo span {
+    display: none;
+  }
+
+  .header .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #0074e4;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .header .nav-links.active li {
+    margin: 1rem 0;
+  }
+
+  .hero {
+    padding: 6rem 0;
+  }
 }
